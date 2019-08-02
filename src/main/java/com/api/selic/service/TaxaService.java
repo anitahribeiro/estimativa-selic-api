@@ -38,7 +38,7 @@ public class TaxaService {
 						continue;
 					}
 				}
-				
+		
 				listaTaxa.add(taxa);
 			}
 		}

@@ -11,7 +11,7 @@ import com.api.selic.domain.MediaTaxa;
 import com.api.selic.service.TaxaService;
 
 @RestController
-@RequestMapping("/taxas")
+@RequestMapping("/selic")
 public class TaxaController {
 
     @Autowired
@@ -21,8 +21,8 @@ public class TaxaController {
 		this.taxaService = taxaService;
 	}
 	
-	//http://localhost:8080/taxas/estimativas?ano=2017
-	//http://localhost:8080/taxas/estimativas?ano=2017&mes=3
+	//http://localhost:8080/selic/estimativas?ano=2017
+	//http://localhost:8080/selic/estimativas?ano=2017&mes=3
 	@GetMapping("/estimativas")
 	public Iterable<Taxa> list(
 			@RequestParam(value = "ano") int ano, 
@@ -30,7 +30,7 @@ public class TaxaController {
 		return taxaService.list(ano, mes);
 	}
 	
-	//http://localhost:8080/taxas/media?ano=2017
+	//http://localhost:8080/selic/media?ano=2017
 	@GetMapping("/media")
 	public MediaTaxa getMedia(
 			@RequestParam(value = "ano") int ano) {
