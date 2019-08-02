@@ -25,7 +25,7 @@ public class MediaTaxa {
 	}
 
 	public Double getMediaTaxa() {
-		return mediaTaxa;
+		return Math.floor(mediaTaxa/12 * 100) / 100;
 	}
 
 	public void setMediaTaxa(double mediaTaxa) {
