@@ -50,30 +50,6 @@ public class TaxaService {
 		
 	}
 	
-	
-public Double getMedia(int ano) {
-		
-		double media = 0;
-		double sum = 0;
-		int count = 0;
-		
-		for(Taxa taxa : taxaRepository.findAll()){
-			if (taxa.getAnoEstimativa() == ano) {
-				sum += taxa.getEstimativaTaxaSelic();
-				count++;
-			}
-		}
-		
-		media = sum/count;
-		
-		return media;
-		
-	}
-
-	
-
-	
-	
 	public Taxa save(Taxa taxa) {
 		return taxaRepository.save(taxa);
 	}
